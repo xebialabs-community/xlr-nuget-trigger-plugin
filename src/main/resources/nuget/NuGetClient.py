@@ -19,7 +19,7 @@ SUCCES_RESULT_STATUS   = 200
 RECORD_CREATED_STATUS  = 201
 
 class NuGetClient(object):
-    def __init__(self, httpConnection, apiKey, username=None, password=None):
+    def __init__(self, httpConnection, apiKey, username="", password=""):
         self.headers        = {"X-NuGet-ApiKey": apiKey}
         self.query_params   = ""
         self.httpConnection = httpConnection
@@ -28,7 +28,7 @@ class NuGetClient(object):
         self.httpRequest = HttpRequest(self.httpConnection, username, password)
 
     @staticmethod
-    def create_client(httpConnection, apiKey, username=None, password=None):
+    def create_client(httpConnection, apiKey, username="", password=""):
         return NuGetClient(httpConnection, apiKey, username, password)
 
     def get_latest_version(self, package_id):

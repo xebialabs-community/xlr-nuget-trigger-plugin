@@ -52,7 +52,7 @@
          "tags":[
 
          ],
-         "packageName":"testpackage",
+         "packageId":"testpackage",
          "server":""
       }
    ],

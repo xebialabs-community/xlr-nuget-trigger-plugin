@@ -18,10 +18,10 @@ if server is None:
 if packageId is None:
     sys.exit("No packageId provided.")
 
- if not apiKey:
+if not apiKey:
     apiKey = server["apiKey"]
 
-client = NuGetClient.create_client(server, apiKey, username, password)
+client = NuGetClient.create_client(server, apiKey, "", "")
 
 try:
     latest_version = client.get_latest_version( packageId )
@@ -32,4 +32,4 @@ try:
     print("Setting triggerState/packageVersion %s" % triggerState)
 
 except Exception, e:
-    sys.exit("Failed to find package id in NuGet server: [%s]" % str(e))
+    sys.exit("Failed to find package in NuGet server: [%s]" % str(e))
