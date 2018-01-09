@@ -19,6 +19,8 @@ See the **[XL Release Documentation](https://docs.xebialabs.com/xl-release/index
 [xlr-nuget-trigger-plugin-license-url]: https://opensource.org/licenses/MIT
 [xlr-nuget-trigger-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/xlr-nuget-trigger-plugin/total.svg
 
+# ALPHA WARNING - PLUGIN NOT RELEASED YET #
+
 # Overview #
 
 This plugin is a XL Release plugin that enables triggering new releases based on a new NuGet package version showing up.

@@ -29,7 +29,7 @@ try:
     triggerState = latest_version
     packageVersion = triggerState
 
-    print("Setting triggerState/packageVersion %s" % triggerState)
+    print("Setting packge [%s] to triggerState/packageVersion [%s]" % (packageId, triggerState))
 
 except Exception, e:
     sys.exit("Failed to find package in NuGet server: [%s]" % str(e))
