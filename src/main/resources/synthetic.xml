@@ -31,7 +31,7 @@
 
         <property name="username" default="" required="false" description="NuGet generally does not require these credentials to be configured."/>
         <property name="password" default="" required="false" password="true" description="NuGet generally does not require these credentials to be configured."/>
-        <property name="apiKey" default="" required="false" hidden="true" description="The API key is an opaque string gotten from the package source by the user and configured into the client. No particular string format is mandated but the length of the API key should not exceed a reasonable size for HTTP header values."/>
+        <property name="apiKey" default="" required="false" description="The API key is an opaque string gotten from the package source by the user and configured into the client. No particular string format is mandated but the length of the API key should not exceed a reasonable size for HTTP header values."/>
 
         <property name="testPackageId" category="input" required="true" description="Package to query versions for" default="System.IO.Compression.ZipFile" />
  
