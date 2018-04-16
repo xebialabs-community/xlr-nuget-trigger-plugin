@@ -16,7 +16,7 @@
 
     <type type="nuget.PublishedPackage" extends="xlrelease.ReleaseTrigger" description="Triggers release when a new version of a package is published to a NuGet server">
         <!-- common -->
-        <property name="packageId" required="true" description="Name of the docker image"/>
+        <property name="packageId" required="true" description="Id of the package in NuGet"/>
         
         <!-- repository -->
         <property name="server" category="NuGet server" referenced-type="nuget.Server" kind="ci" description="NuGet server to poll"/>

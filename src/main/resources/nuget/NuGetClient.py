@@ -32,14 +32,14 @@ class NuGetClient(object):
         return NuGetClient(httpConnection, apiKey, username, password)
 
     def get_latest_version(self, package_id):
-        api_url = '/autocomplete?id=%s&prerelease=false' % (package_id)
+        api_url = '/api/v2/package-versions/%s?semVerLevel=2.0.0&includePrerelease=false' % (package_id)
         response = self.httpRequest.get(api_url, contentType='application/json', headers = self.headers)
 
         if response.getStatus() == SUCCES_RESULT_STATUS:
-            versions_list = json.loads(response.getResponse())['data']
+            versions_list = json.loads(response.getResponse())
             #print("Versions founds: %s" % str(versions_list))
 
-            # the will always be a 'latest' but that's not helpful to us to see if there's a new version 
+            # there may be a 'latest' but that's not helpful to us to see if there's a new version 
             if "latest" in versions_list:
                 versions_list.remove("latest")
             # End if
@@ -61,9 +61,9 @@ class NuGetClient(object):
         # End if
     # End get_latest_version
 
+
     def throw_error(self, response):
         print("Error from NuGet server, HTTP Return: %s\n" % (response.getStatus()))
         print("Detailed error: %s\n" % response.response)
-        sys.exit(response.response)
-
+        sys.exit(1)
 

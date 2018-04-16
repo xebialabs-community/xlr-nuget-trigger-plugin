@@ -25,11 +25,14 @@ See the **[XL Release Documentation](https://docs.xebialabs.com/xl-release/index
 
 This plugin is a XL Release plugin that enables triggering new releases based on a new NuGet package version showing up.
 
+## Requirements
+
+- This plugin requires XLR 6.0.x+
+- This plugins uses the NuGet v2 API and has no support for v1 or v3
+
 ## Installation ##
 
 Place the latest released version under the `plugins` subdirectory in the XL Release installation directory.
-
-This plugin requires XLR 6.0.x+
 
 ## Testing ##
 
